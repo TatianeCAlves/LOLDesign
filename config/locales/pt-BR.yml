@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    models:
+      cash: 'Caixa'
+attributes:
+cash:
+  requests: 'Pedidos'
+  deliveries: 'Entregas'
+  input: 'Entradas'
+  exits: 'Saidas'
+  profit: 'Lucro'

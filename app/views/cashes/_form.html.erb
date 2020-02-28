@@ -1,0 +1,40 @@
+<%= form_for @cash do |f| %> 
+ 
+
+ <% price = 45.9999 %>
+<price><%= number_to_currency(price)%></price>
+=> <price>R$45.99</price>
+
+  <p><strong>
+    <%= f.label :Pedidos %>
+   <%= number_field(:requests, :price, in: 1.0..20.0, step: 0.5) %>
+    
+  </p></strong>
+
+  <p><strong>
+    <%= f.label :Entrega %>
+    <%= number_field(:deliveries, :price, in: 1.0..20.0, step: 0.5) %>
+    </strong>
+  </p>
+
+  <p><strong>
+    <%= f.label :Entrada %>
+<%= number_field(:input, :price, in: 1.0..20.0, step: 0.5) %>
+  </p></strong>
+
+    <p><strong>
+    <%= f.label :Saída %>
+<%= number_field(:exits, :price, in: 1.0..20.0, step: 0.5) %>
+  </p></strong>
+
+
+<%= link_to 'Voltar', cashes_path %>
+   
+  <p><br>
+    <%= f.submit 'Salvar'%>
+  </p></br>
+<% end -%>
+
+
+
+
