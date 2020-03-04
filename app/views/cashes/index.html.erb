@@ -1,26 +1,26 @@
-<h2>Fluxo de Caixa</h2>
+    <h2>Fluxo de Caixa</h2>
 
-<br><br>
-<%= link_to "Novo Cadastro", new_cash_path %>
-</br></br>
+    <br><br>
+    <%= link_to "Novo Cadastro", new_cash_path %>
+    </br></br>
 
 
-<table>
-<thead>
+    <table>
+    <thead>
 
-<tr>
-<th><%=Cash.human_attribute_name(:Pedido) %></th>
-<th><%=Cash.human_attribute_name(:Entrega) %></th>
-<th><%=Cash.human_attribute_name(:Entrada) %></th>
-<th><%=Cash.human_attribute_name(:Saída) %></th>
-<th><%=Cash.human_attribute_name(:Lucro) %></th>
-<th>&nbsp;</th>
-</tr>
-</thead>
-<tbody>
- <%= render(partial: "cash", collection: @cashes ) || render(partial: "no_record")%>
-</tbody>
-</table>
+    <tr>
+    <th><%=Cash.human_attribute_name(:requests) %></th>
+    <th><%=Cash.human_attribute_name(:deliveries) %></th>
+    <th><%=Cash.human_attribute_name(:input) %></th>
+    <th><%=Cash.human_attribute_name(:exits) %></th>
+    <th><%=Cash.human_attribute_name(:profit) %></th>
+    <th>&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= render(partial: "cash", collection: @cashes ) || render(partial: "no_record")%>
+    </tbody>
+    </table>
 
 
 

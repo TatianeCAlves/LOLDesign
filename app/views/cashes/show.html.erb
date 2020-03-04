@@ -1,26 +1,26 @@
-<h1>Fluxo de Caixa</h1>
+    <h1>Fluxo de Caixa</h1>
 
-<p id="notice"><%= notice %></p>
-<p>
-<strong><%= Cash.human_attribute_name(:Pedido)%>:
-</strong><%= @cash.requests %>
-</p>
+    <p id="notice"><%= notice %></p>
+    <p>
+    <strong><%= Cash.human_attribute_name(:Pedido)%>:
+    </strong><%= @cash.requests %>
+    </p>
 
-<p>
-<strong><%= Cash.human_attribute_name(:Entrega)%>:
-</strong><%= @cash.deliveries %>
-</p>
+    <p>
+    <strong><%= Cash.human_attribute_name(:Entrega)%>:
+    </strong><%= @cash.deliveries %>
+    </p>
 
-<p>
-<strong><%= Cash.human_attribute_name(:Entrada)%>:
-</strong><%= @cash.input %>
-</p>
+    <p>
+    <strong><%= Cash.human_attribute_name(:Entrada)%>:
+    </strong><%= @cash.input %>
+    </p>
 
-<p>
-<strong><%= Cash.human_attribute_name(:Saída)%>:
-</strong><%= @cash.exits %>
-</p>
+    <p>
+    <strong><%= Cash.human_attribute_name(:Saída)%>:
+    </strong><%= @cash.exits %>
+    </p>
 
-<%= link_to 'Voltar', cashes_path %>
+    <%= link_to 'Voltar', cashes_path %>
 
 

@@ -8,11 +8,9 @@ class CashesController < ApplicationController
   end
 
   def create
-    @cashes = Cash.new(cash_params)
+    @cash = Cash.new(cash_params)
 
-    @cashes = Cash.new(cash_params)
-
-    if @cashes.save
+    if @cash.save
       redirect_to cashes_path, notice: 'Criado com sucesso'
     else
       render action: :new
@@ -46,16 +44,17 @@ before_action :load_cash, except: [:index,:new, :create]
 def load_cash
   @cash = Cash.find(params[:id])
 end
+ 
 
 def cash_params
   params
   .require(:cash)
-    .permit(
+     .permit(
       :requests,
       :deliveries,
       :input,
       :exits,
-      :profit,
-    )
-end
+      :profit
+      )
+  end
 end
